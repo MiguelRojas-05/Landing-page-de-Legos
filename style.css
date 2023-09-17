@@ -35,7 +35,6 @@ body{
 }
 
 .navbar{
-    background-color: var(--lightblue);
     grid-area: nav;
 }
 .navbar__content{
@@ -165,6 +164,53 @@ body{
     grid-row: 1/2;
     height: 100%;
 }
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+
+    transform: translateX(100%);
+
+    background-color: var(--yellow);
+    border-radius:  0 80px 0 0;
+
+    animation: 2.5s footer .5s ease-in-out;
+    animation-fill-mode: forwards ;
+}
+@keyframes footer {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.footer div img{
+    width: 160px;
+    position: absolute;
+    bottom: 10px;
+
+    transform: translateY(0px) scale(1);
+    transition: transform .5s ease-in-out;
+}
+
+.footer div:hover img{
+    cursor: pointer;
+    transform: translateY(-20px) scale(1.1);
+    transition: transform .3s ease-in-out;
+}
+
+.footer div{
+    background-color: var(--blue);
+    width: 130px;
+    height: 65px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
 
 .loader{
     width: 100%;
