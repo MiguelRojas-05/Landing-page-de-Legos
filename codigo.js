@@ -1,46 +1,16 @@
-const team = [
-    {
-      name: "Nicolas",
-      age: 12,
-    },
-    {
-      name: "Andrea",
-      age: 8,
-    },
-    {
-      name: "Zulema",
-      age: 2,
-    },
-    {
-      name: "Santiago",
-      age: 18,
-    },
-    {
-      name: "Nico",
-      age: 20,
-    },
-  ];
+const Boton1 = document.getElementById('button1');
+const Boton2 = document.getElementById('button2');
+const Boton3 = document.getElementById('button3');
+const Modal = document.querySelector(".modal");
+const botonCerrar = document.querySelector(".closeButton") 
 
-/* const respuesta = team.every(item => item.age < 20);
-console.log(respuesta); */
 
-function estaOno(array,term){
-  return array.filter(item=>item.includes(term));
-}
-const   tittle = "La forma de correr Python";
-function parseToUrl(tittle){
-  return tittle.split(' ').join('-').toLowerCase();
+function openCloseModal(){
+  Modal.classList.toggle("hidden");
+  console.log("si esta bien");
 }
 
-  const array= [
-    "Beautiful is better than ugly",
-    "Explicit is better than implicit",
-    "Simple is better than complex",
-    "Complex is better than complicated",
-  ];
-
-function countWords(array){
-  
-  return array.flatMap(item=>item.split(" ")).length;
-};
-
+Boton1.addEventListener('click',openCloseModal)
+Boton2.addEventListener('click',openCloseModal)
+Boton3.addEventListener('click',openCloseModal)
+botonCerrar.addEventListener('click',openCloseModal)
