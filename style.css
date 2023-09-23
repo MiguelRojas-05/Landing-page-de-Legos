@@ -286,26 +286,29 @@ body{
     position: absolute;
     z-index: 5;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 .modal__content{
     background-color: #fff;
     width: 50%;
-    height: 50%;
+    height: 60%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
 }
 .closeButton{
     width: 2rem;
     cursor: pointer;
-    transform: translatey(-27px);
-    grid-column: 3 / 4;
+    align-self: flex-end;
 }
 /* ---------------------------------------- */
 .modal__content__slider{
-    background-color: #036cb6;
         width: 100%;
         max-width: 800px;
-        height: 100%;
+        height:90%;
         max-height: 600px;
         transform-style: preserve-3d;
         display: flex;
@@ -318,8 +321,8 @@ body{
         height: 100%;
 }
 .card{
-    position: absolute;
-        width: 60%;
+        position: absolute;
+        width: 55%;
         height: 100%;
         left: 0;
         right: 0;
@@ -345,7 +348,7 @@ body{
     #radio-1:checked ~ .cards #card-1,
     #radio-2:checked ~ .cards #card-2,
     #radio-3:checked ~ .cards #card-3 {
-        transform: translateX(0) scale(1);
+        transform: translateX(0) translateY(10%) scale(1);
         z-index: 60;
     }
 
@@ -353,32 +356,68 @@ body{
     input[type=radio]{
         display: none;
     }
-    
-   
+
+     
+/* ----------- Imagenes de Modal ------------ */
 
 
-     .card > img{
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-
+.modalImg1{
+    background-repeat: no-repeat;
+    background-image: url('https://static.platzi.com/media/public/uploads/spider-man-3_19f5c510-8059-4477-abf8-42249a5445b7.png');
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+.modalImg2{
+    background-repeat: no-repeat;
+    background-image: url('https://static.platzi.com/media/public/uploads/spider-man-2_b24c96b3-6d59-496f-815d-32b25eba0141.png');
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+.modalImg3{
+    background-repeat: no-repeat;
+    background-image: url('https://static.platzi.com/media/public/uploads/spider-man_db8af43d-b692-4986-a385-e645d286e142.png');
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+.batman1{
+    background-image: url('https://lego.eliteoficial.com/cdn/shop/files/30653_Prod_1080x.png?v=1689093495');
+}
+.batman2{
+    background-image: url('https://assets.stickpng.com/images/585d33e9cb11b227491c3342.png');
+}
+.batman3{
+    background-image: url('https://www.nicepng.com/png/full/19-191438_lego-batman-transparent-png-svg-black-and-white.png');
+}
+.robbin1{
+    background-image: url('https://cdn.merlinssteine.de/minifigs/coltlbm32-bl.webp?v=5');
+}
+.robbin2{
+    background-image: url('https://i.pinimg.com/originals/f7/b1/72/f7b1725dfba0dce31c0ac94e8abd488f.png');
+}
+.robbin3{
+    background-image: url('https://cdn.merlinssteine.de/minifigs/sh315-bl.webp?v=5');
+}
+/* ----------- Imagenes de Modal ------------ */
 
     #item-2:checked ~ .cards #selector-1,
     #item-1:checked ~ .cards #selector-3,
     #item-3:checked ~ .cards #selector-2{
-        transform: translateX(-40%) scale(0.8);
-        opacity: 0.6;
+        transform: translateX(-40%) scale(0.7);
+        opacity: .5;
         z-index: 55;
     }
     
     #item-3:checked ~ .cards #selector-1,
     #item-1:checked ~ .cards #selector-2,
     #item-2:checked ~ .cards #selector-3{
-        transform: translateX(40%) scale(0.8);
-        opacity: 0.6;
+        transform: translateX(40%) scale(0.7);
+        opacity: .5;
         z-index: 55;
     }
     
